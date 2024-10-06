@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Exoplanets</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image 1.webp'); /* Add your background image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 40px; /* Space below the header */
+            color: #f3ecec;
+        }
+        .card-container {
+            display: flex;
+            gap: 100px; /* Space between cards */
+        }
+
+        /* Glass Effect Card Styles from Uiverse.io by joe-watson-sbf */ 
+        .container {
+          color: white;
+          position: relative;
+          font-family: sans-serif;
+          margin-top: 50px; /* Space above glass effect card */
+        }
+
+        .container::before,
+        .container::after {
+          content: "";
+          background-color: #fab5704c;
+          position: absolute;
+        }
+
+        .container::before {
+          border-radius: 50%;
+          width: 6rem;
+          height: 6rem;
+          top: 30%;
+          right: 7%;
+        }
+
+        .container::after {
+          content: "";
+          position:absolute;
+          height :3rem ;
+          top :8% ;
+          right :5% ;
+          border :1px solid ;
+        }
+
+        .container .box {
+          width :16.875em ; /* Width of each card */
+          height :20.875em ; /* Height of each card */
+          padding :1rem ;
+          background-color :rgba(255,255,255,0.074);
+          border :1px solid rgba(255,255,255,0.222);
+          -webkit-backdrop-filter :blur(20px);
+                  backdrop-filter :blur(20px);
+                  border-radius :0.7rem ;
+                  transition :all ease 0.3s ;
+                  display:flex ;
+                  flex-direction :column ;
+                  justify-content :space-between ;
+                  box-shadow :0px 0px 20px rgba(255,255,255,0.5);
+                }
+
+                .container .box .title {
+                  font-size :2rem ;
+                  font-weight :500 ;
+                  letter-spacing :0.1em ;
+                }
+
+                .container .box img {
+                  width: 100%; /* Make image responsive */
+                  height: auto; /* Maintain aspect ratio */
+                  border-radius: 0.5rem; /* Rounded corners for images */
+                }
+
+                .container .box div strong {
+                  display:block ;
+                  margin-bottom :0.5rem ;
+                }
+
+                .container .box div p {
+                  margin :0 ;
+                  font-size :0.9em ;
+                  font-weight :300 ;
+                  letter-spacing :0.1em ;
+                }
+
+                .container .box div span {
+                  font-size :0.7rem ;
+                  font-weight :300 ;
+                }
+
+                .container .box:hover {
+                  box-shadow :0px 0px 20px 1px #ffbb763f ;
+                  border :1px solid rgba(255,255,255,0.454) ;
+                }
+    </style>
+</head>
+<body>
+
+<h1>Explore Exoplanets with us</h1>
+
+<div class="card-container">
+    <!-- First Glass Effect Card -->
+    <div class="container">
+      <div class="box">
+        <span class="title">About Exoplanets</span>
+        <a href="http://127.0.0.1:5500/exo/exo.html"><img src="webpage3.png" alt="Exoplanet Image"> <!-- Add your image here -->
+        </a>
+        <div>
+          <p>Learn about the fascinating worlds beyond our solar system.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Glass Effect Card -->
+    <div class="container">
+      <div class="box">
+        <span class="title">NASA's Goal</span>
+        <a href="http://127.0.0.1:5500/Page4.html"><img src="webpage 4.png" alt="NASA's Goal Image"> <!-- Add your image here -->
+        </a>
+        <div>
+          <p>Discover new planets and understand their atmospheres.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Glass Effect Card -->
+    <div class="container">
+      <div class="box">
+        <span class="title">Explore as a Scientist</span>
+       <a href="home.html"><img src="Textures\main.png" alt="Explore as a Scientist Image"> <!-- Add your image here -->
+        </a>
+        <div>
+          <p>Join us in exploring the universe!</p>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+</body>
+</html>

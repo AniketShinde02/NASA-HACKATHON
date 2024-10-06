@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Exoplanet Exploration Program</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling */
+            background-color: #ADD8E6; /* Light blue */
+        }
+        section {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align items to the top */
+            color: white;
+            text-align: center;
+            background-size: cover; /* Cover the entire section */
+            background-attachment: fixed; /* Keep the background fixed while scrolling */ 
+        }
+        #page1 {
+            background-image: url('pattern.jpg'); 
+        }
+        #page2 {
+            background-image: url('pattern3.jpg'); 
+        }
+        #page3 {
+            background-image: url('paterrn4.jpg'); 
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px; /* Add margin to separate from top */
+        }
+        p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .card-container {
+            display: flex; /* Use Flexbox for card layout */
+            justify-content: space-around; /* Space cards evenly */
+            width: 100%; /* Full width of section */
+            margin-top: 20px; /* Space between text and cards */
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+            width: 400px; /* Increased width */
+            height: 250px; /* Increased height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition effect */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+        }
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+        }
+        img{
+            height: 800px;
+            width: 800px;
+        }
+        .image{
+            height: 500px;
+            width: 500px;
+        }
+        .satellite{
+            height: 400px;
+            width: 400px;
+        }
+        .sat{
+            height:300px ;
+            width: 500px;
+        }
+
+        button {
+    position: fixed; /* Use absolute positioning */
+    left: 0; /* Position it 0 pixels from the left */
+    top: 95%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust for the height of the element */
+    padding: 10px; /* Optional padding */
+    background-color: rgb(6, 67, 87); /* Optional background color */
+    color:white;
+    border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<section id="page1">
+    <h1>NASA's Exoplanet Exploration Program</h1>
+    <p>Discovering new worlds beyond our solar system.</p>
+    <div class="card-container">
+        <div class="card">
+            <img class= "image" src=".vscode\WhatsApp Image 2024-10-06 at 09.03.24_af864a23.jpg" alt="">
+        </div>
+        <div class="card">
+            <img class="satellite" src=".vscode\WhatsApp Image 2024-10-06 at 09.04.04_2fd2ef59.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="page2">
+    <h1>Our Goals</h1>
+    <p>To determine the abundance and distrubution of extra solar planets as a function of size,orbital radius,and other factors in our galaxy      
+    </p>
+    <p>
+        To understand the characteristic of exoplanet and exoplanetary system including the formation, evolution and composition.
+    </p>
+    <p>
+        To find planets that maybe habitable and search for the fingerprints of extant life on those planets.
+    </p>
+    <div class="card-container">
+        <div class="card">
+           <img class="sat" src=".vscode\WhatsApp Image 2024-10-06 at 09.05.53_c999737f.jpg" alt="">
+        </div>
+        <div class="card">
+           <img class="satellite" src=".vscode\WhatsApp Image 2024-10-06 at 09.09.51_cd16b81c.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="page3">
+    <h1>Join Us on This Journey</h1>
+    <img src=".vscode\WhatsApp Image 2024-10-06 at 08.55.32_f6924338.jpg" alt="">
+</section>
+
+<button onclick="window.location.href='http://127.0.0.1:5500/page2.html';"> <-Back</button>
+
+</body>
+</html>
