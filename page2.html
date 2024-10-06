@@ -14,11 +14,12 @@
             align-items: center;
             justify-content: center;
             height: 100vh; /* Full viewport height */
+            background-color: #1A1D23; /* New background color */
         }
         h1 {
             font-size: 3em;
             margin-bottom: 40px; /* Space below the header */
-            color: #f3ecec;
+            color: #66CCCC; /* New header color */
         }
         .card-container {
             display: flex;
@@ -27,7 +28,7 @@
 
         /* Glass Effect Card Styles from Uiverse.io by joe-watson-sbf */ 
         .container {
-          color: white;
+          color: #FFFFFF; /* White text color */
           position: relative;
           font-family: sans-serif;
           margin-top: 50px; /* Space above glass effect card */
@@ -36,7 +37,7 @@
         .container::before,
         .container::after {
           content: "";
-          background-color: #fab5704c;
+          background-color: #FFC57D; /* New accent color */
           position: absolute;
         }
 
@@ -71,12 +72,14 @@
                   flex-direction :column ;
                   justify-content :space-between ;
                   box-shadow :0px 0px 20px rgba(255,255,255,0.5);
-                }
+                  background-color: #212121; /* New primary color */
+        }
 
                 .container .box .title {
                   font-size :2rem ;
                   font-weight :500 ;
                   letter-spacing :0.1em ;
+                  color: #66CCCC; /* New secondary color */
                 }
 
                 .container .box img {
@@ -103,7 +106,7 @@
                 }
 
                 .container .box:hover {
-                  box-shadow :0px 0px 20px 1px #ffbb763f ;
+                  box-shadow :0px 0px 20px 1px #FFC57D; /* New accent color */
                   border :1px solid rgba(255,255,255,0.454) ;
                 }
     </style>
@@ -116,7 +119,7 @@
     <!-- First Glass Effect Card -->
     <div class="container">
       <div class="box">
-        <span class="title">About Exoplanets</span>
+        < span class="title">About Exoplanets</span>
         <a href="http://127.0.0.1:5500/exo/exo.html"><img src="webpage3.png" alt="Exoplanet Image"> <!-- Add your image here -->
         </a>
         <div>
