@@ -1,0 +1,45 @@
+            const canvas = document.getElementById('solarSystem');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+class Planet {
+    constructor(x, y, radius, color, speed) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.speed = speed;
+        this.angle = 0;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.closePath();
+    }
+
+    orbit() {
+        this.angle += this.speed;
+        this.x = canvas.width / 2 + Math.cos(this.angle) * 150;
+        this.y = canvas.height / 2 + Math.sin(this.angle) * 150;
+    }
+}
+
+const sun = new Planet(canvas.width / 2, canvas.height / 2, 50, 'yellow', 0);
+const earth = new Planet(0, 0, 20, 'blue', 0.02);
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    sun.draw();
+    earth.orbit();
+    earth.draw();
+
+    requestAnimationFrame(animate);
+}
+
+animate();

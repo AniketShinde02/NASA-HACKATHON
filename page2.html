@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Exoplanets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon_io\favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('image 1.webp');
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #040619;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #00BFFF;
+            display: flex;
+            align-items: center;
+        }
+        h1 i {
+            margin-right: 10px;
+        }
+        .card-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            color: #FFFFFF;
+            position: relative;
+            font-family: sans-serif;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .container::before,
+        .container::after {
+            content: "";
+            background-color: #FF4500;
+            position: absolute;
+        }
+        .container::before {
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            top: 30%;
+            right: 7%;
+        }
+        .container::after {
+            height: 3rem;
+            top: 8%;
+            right: 5%;
+            border: 1px solid;
+        }
+        .container .box {
+            width: 18em;
+            height: 22em;
+            padding: 1.5rem;
+            background-color: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(20px);
+            border-radius: 0.7rem;
+            transition: box-shadow 0.3s ease, border 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+            margin-bottom: 20px;
+        }
+        .container .box .title {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #00BFFF;
+            display: flex;
+            align-items: center;
+        }
+        .container .box .title i {
+            margin-right: 10px;
+        }
+        .container .box img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .container .box div strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .container .box div p {
+            margin: 0;
+            font-size: 0.9em;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+        .container .box div span {
+            font-size: 0.7rem;
+            font-weight: 300;
+        }
+        .container .box:hover {
+            box-shadow: 0px 0px 20px 1px #FF4500;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fas fa-rocket"></i>Explore Exoplanets with us</h1>
+
+    <div class="card-container">
+        <!-- First Glass Effect Card -->
+        <div class="container">
+            <div class="box">
+                <span class="title"><i class="fas fa-globe"></i>&nbsp;About Exoplanets</span>
+                <a href="exo.html"><img src="webpage3.png" alt="Exoplanet Image"></a>
+                <div>
+                    <p>Learn about the fascinating worlds beyond our solar system.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Glass Effect Card -->
+        <div class="container">
+            <div class="box">
+                <span class="title"><i class="fas fa-bullseye"></i>&nbsp;NASA's Goal</span>
+                <a href="http://127.0.0.1:5500/Page4.html"><img src="webpage 4.png" alt="NASA's Goal Image"></a>
+                <div>
+                    <p>Discover new planets and understand their atmospheres.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Third Glass Effect Card -->
+        <div class="container">
+            <div class="box">
+                <span class="title"><i class="fas fa-flask"></i>&nbsp;Explore as a Scientist</span>
+                <a href="home.html"><img src="Textures\main.png" alt="Explore as a Scientist Image"></a>
+                <div>
+                    <p>Join us in exploring the universe!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="background-audio" loop preload="auto">
+      <source src="Audios/Background.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+  </audio>
+  
+  <button-1 id="audio-toggle" onclick="toggleAudio()">
+      <i class="fa-solid fa-volume-high"></i>
+  </button-1>
+  <script src="script.js"></script>
+  
+</body>
+</html>

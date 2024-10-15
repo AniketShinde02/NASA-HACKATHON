@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Exoplanet Exploration Program</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" href="favicon_io\favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #040619;
+            color: white;
+            background-image: url('space-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+            color: #00BFFF;
+            text-shadow: 2px 2px #000;
+            animation: fadeIn 2s;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
+            animation: fadeIn 2s;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            margin-top: 40px;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: slideIn 1s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #00BFFF;
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(0, 191, 255, 0.3);
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(0, 191, 255, 0.5);
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        .slide-in {
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            to { transform: translateX(0); }
+        }
+        button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #FF6347;
+        }
+        .info-section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            max-width: 800px;
+        }
+        .info-section ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        .info-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #00BFFF;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .info-section a:hover {
+            background: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="#page2"><i class="fas fa-bullseye"></i> Goals</a>
+    <a href="#page3"><i class="fas fa-rocket"></i> Join Us</a>
+</nav>
+
+<section id="page1">
+    <h1 data-aos="fade-up">NASA's Exoplanet Exploration Program</h1>
+    <p data-aos="fade-up">Discovering new worlds beyond our solar system.</p>
+    <div class="card-container">
+        <div class="card" data-aos="zoom-in">
+            <img src=".vscode/WhatsApp Image 2024-10-06 at 09.03.24_af864a23.jpg" alt="Exoplanet Image">
+            <p>Exploring distant worlds and expanding our understanding of the universe.</p>
+        </div>
+        <div class="card" data-aos="zoom-in">
+            <img src=".vscode/WhatsApp Image 2024-10-06 at 09.04.04_2fd2ef59.jpg" alt="Satellite Image">
+            <p>Using advanced technology to detect and study exoplanets.</p>
+        </div>
+    </div>
+</section>
+
+<section id="page2">
+    <h1 data-aos="fade-up">Our Goals</h1>
+    <div class="info-section" data-aos="fade-up">
+        <p>To determine the abundance and distribution of extrasolar planets as a function of size, orbital radius, and other factors in our galaxy.</p>
+        <p>To understand the characteristics of exoplanets and exoplanetary systems, including their formation, evolution, and composition.</p>
+        <p>To find planets that may be habitable and search for the fingerprints of extant life on those planets.</p>
+    </div>
+    <div class="card-container">
+        <div class="card" data-aos="zoom-in">
+           <img src=".vscode/WhatsApp Image 2024-10-06 at 09.05.53_c999737f.jpg" alt="Exoplanet Research">
+           <p>Conducting cutting-edge research to uncover the secrets of exoplanets.</p>
+        </div>
+        <div class="card" data-aos="zoom-in">
+           <img src=".vscode/WhatsApp Image 2024-10-06 at 09.09.51_cd16b81c.jpg" alt="Space Telescope">
+           <p>Utilizing state-of-the-art telescopes to observe distant planetary systems.</p>
+        </div>
+    </div>
+</section>
+
+<section id="page3">
+    <h1 data-aos="fade-up">Join Us on This Journey</h1>
+    <img data-aos="zoom-in" src=".vscode/WhatsApp Image 2024-10-06 at 08.55.32_f6924338.jpg" alt="Space Exploration">
+    <div class="info-section" data-aos="fade-up">
+        <h2>How to Find an Exoplanet</h2>
+        <ul>
+            <li>Radial Velocity: 1092 Planets discovered</li>
+            <li>Transit: 4295 Planets discovered</li>
+            <li>Direct Imaging: 82 Planets discovered</li>
+            <li>Gravitational Microlensing: 225 Planets discovered</li>
+            <li>Astrometry: 3 Planets discovered</li>
+        </ul>
+        <a href="https://exoplanets.nasa.gov/alien-worlds/ways-to-find-a-planet/?intent=021#">Learn more</a>
+    </div>
+</section>
+
+<button onclick="window.location.href='http://127.0.0.1:5500/page2.html';">Back</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<audio id="background-audio" loop preload="auto">
+    <source src="Audios/Background.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<button-1 id="audio-toggle" onclick="toggleAudio()">
+    <i class="fa-solid fa-volume-high"></i>
+</button-1>
+<script src="script.js"></script>
+
+</body>
+</html>

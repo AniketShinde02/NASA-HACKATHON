@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon_io\favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA's Exoplanet Exploration Program</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling */
+            background-color: #ADD8E6; /* Light blue */
+        }
+        section {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Align items to the top */
+            color: white;
+            text-align: center;
+            background-size: cover; /* Cover the entire section */
+            background-attachment: fixed; /* Keep the background fixed while scrolling */ 
+        }
+        #page1 {
+            background-image: url('pattern.jpg'); 
+        }
+        #page2 {
+            background-image: url('pattern3.jpg'); 
+        }
+        #page3 {
+            background-image: url('pattern4.jpg'); 
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px; /* Add margin to separate from top */
+        }
+        p {
+            font-size: 1.5em;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .card-container {
+            display: grid; /* Use CSS Grid for card layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between cards */
+            width: 90%; /* Full width of section with padding */
+            margin-top: 20px; /* Space between text and cards */
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+            border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners for images */
+            transition: transform 0.3s, box-shadow 0.3s; /* Transition effect */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card img {
+            width: 100%; /* Full width for images */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .card h2 {
+            font-size: 1.5em;
+            margin-top: 10px; /* Space above title */
+        }
+        .card p {
+            padding: 10px; /* Padding for text inside card */
+            text-align: center; /* Center text inside card */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+        }
+        nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<section id="page1">
+    <h1>Nasa's Exoplanet Exploration Program</h1>
+    <p>Discovering new worlds beyond our solar system.</p>
+    <div class="card-container">
+        <div class="card">
+            <img src="kepler186f.jpg" alt="Exoplanet Kepler-186f"> <!-- Add your image here -->
+            <h2>Exoplanet Kepler-186f</h2>
+            <p>First Earth-sized planet discovered in the habitable zone.</p>
+        </div>
+        <div class="card">
+            <img src="proxima_centauri_b.jpg" alt="Exoplanet Proxima Centauri b"> <!-- Add your image here -->
+            <h2>Exoplanet Proxima Centauri b</h2>
+            <p>Closest known exoplanet that may support life.</p>
+        </div>
+    </div>
+</section>
+
+<section id="page2">
+    <h1>Our Goals</h1>
+    <p>To identify Earth-like exoplanets and study their atmospheres for signs of life.</p>
+    <div class="card-container">
+        <div class="card">
+           <img src="trappist1e.jpg" alt="Exoplanet TRAPPIST-1e"> <!-- Add your image here -->
+           <h2>Exoplanet TRAPPIST-1e</h2>
+           <p>Potentially habitable with liquid water on its surface.</p>
+       </div>
+       <div class="card">
+           <img src="lhs1140b.jpg" alt="Exoplanet LHS 1140 b"> <!-- Add your image here -->
+           <h2>Exoplanet LHS 1140 b</h2>
+           <p>A super-Earth located in the habitable zone of its star.</p>
+       </div>
+   </div>
+</section>
+
+<section id="page3">
+    <h1>Join Us on This Journey</h1>
+    <p>Explore the universe with us and learn about the mysteries of exoplanets.</p>
+    <div class="card-container">
+       <div class="card">
+           <img src="wasp121b.jpg" alt="Exoplanet WASP-121b"> <!-- Add your image here -->
+           <h2>Exoplanet WASP-121b</h2>
+           <p>A scorching hot Jupiter that defies our understanding of planetary atmospheres.</p>
+       </div>
+       <div class="card">
+           <img src="hd40307g.jpg" alt="Exoplanet HD 40307g"> <!-- Add your image here -->
+           <h2>Exoplanet HD 40307g</h2>
+           <p>An Earth-sized planet in a multi-planet system.</p>
+       </div>
+   </div>
+</section>
+
+</body>
+</html>
