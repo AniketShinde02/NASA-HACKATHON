@@ -20,19 +20,33 @@ function toggleAudio() {
 function initAudio() {
     const audioPlaying = localStorage.getItem('audioPlaying');
     const audioTime = localStorage.getItem('audioTime');
-    
-    if (audioTime) {
-        audio.currentTime = parseFloat(audioTime);
-    }
-    
-    if (audioPlaying === 'true') {
-        audio.play().catch(e => console.log('Audio play failed:', e));
-        audioIcon.classList.remove('fa-volume-xmark');
-        audioIcon.classList.add('fa-volume-high');
+
+    // Check if we are on index.html
+    const isIndexPage = window.location.pathname.endsWith('index.html');
+
+    if (isIndexPage) {
+        // Start from the beginning on index.html
+        audio.currentTime = 0;
+        if (audioPlaying !== 'false') {
+            audio.play().catch(e => console.log('Audio play failed:', e));
+            audioIcon.classList.remove('fa-volume-xmark');
+            audioIcon.classList.add('fa-volume-high');
+        }
     } else {
-        audio.pause();
-        audioIcon.classList.remove('fa-volume-high');
-        audioIcon.classList.add('fa-volume-xmark');
+        // Restore previous state for other pages
+        if (audioTime) {
+            audio.currentTime = parseFloat(audioTime);
+        }
+        
+        if (audioPlaying === 'true') {
+            audio.play().catch(e => console.log('Audio play failed:', e));
+            audioIcon.classList.remove('fa-volume-xmark');
+            audioIcon.classList.add('fa-volume-high');
+        } else {
+            audio.pause();
+            audioIcon.classList.remove('fa-volume-high');
+            audioIcon.classList.add('fa-volume-xmark');
+        }
     }
 }
 
@@ -53,3 +67,11 @@ window.addEventListener('beforeunload', () => {
     localStorage.setItem('audioTime', audio.currentTime);
     localStorage.setItem('audioPlaying', !audio.paused);
 });
+
+// Automatically play the audio on page load for index.html
+window.onload = function() {
+    if (window.location.pathname.endsWith('index.html')) {
+        // Start from the beginning and play
+        audio.play().catch(e => console.log('Audio play failed:', e));
+    }
+};
